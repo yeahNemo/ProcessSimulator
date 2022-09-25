@@ -19,6 +19,11 @@
 <script>
 import pubsub from 'pubsub-js'
 export default {
+  mounted () {
+    this.subId = pubsub.subscribe('sendSpeedEv', (name, data) => {
+      this.onChangeSpeed()
+    })
+  },
   data () {
     return {
       speedMultiplier: 1

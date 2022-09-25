@@ -30,6 +30,7 @@ export default {
       // 改变速率
       this.time = 0.5 / data
     })
+    pubsub.publish('sendSpeedEv', '')
   },
   data () {
     return {
