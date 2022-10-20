@@ -9,20 +9,11 @@
             <!-- <ThreadItem :id="count" :speedMultiplier="activeCount" :countAdd="countAdd" :countMinus="countMinus"
             v-for="count in threadCount" :key="count"></ThreadItem> -->
             <!-- <ProcessItem  v-for="i in 3" :key="i" ></ProcessItem> -->
-            <div v-show="!checked">
-              <ProcessItem delayTime="0" :isTimeSlice="false"></ProcessItem>
-              <ProcessItem delayTime="0.8" :isTimeSlice="false"></ProcessItem>
-              <ProcessItem delayTime="1.6" :isTimeSlice="false"></ProcessItem>
-            </div>
-            <div v-show="checked">
-              <ProcessItem delayTime="0" :isTimeSlice="true"></ProcessItem>
-              <ProcessItem delayTime="0.1" :isTimeSlice="true"></ProcessItem>
-              <ProcessItem delayTime="0.2" :isTimeSlice="true"></ProcessItem>
-            </div>
 
         </div>
+        <ProcessItem></ProcessItem>
 
-        <van-row type="flex" justify="center" align="center">
+        <!-- <van-row type="flex" justify="center" align="center">
           <van-switch size="24px" v-model="checked" />
           <van-col span="1"></van-col>
           <p style="font-size:80%">时间片轮转</p>
@@ -32,28 +23,14 @@
           <van-button plain round type="primary" @click="startAnima">开始</van-button>
           <van-col span="3"></van-col>
           <van-button plain round type="primary" @click="stopAnima">停止</van-button>
-        </van-row>
+        </van-row> -->
     </div>
 </template>
 
 <script>
 import ProcessItem from './processItem.vue'
-import pubsub from 'pubsub-js'
 export default {
-  components: { ProcessItem },
-  data () {
-    return {
-      checked: false
-    }
-  },
-  methods: {
-    startAnima () {
-      pubsub.publish('startAnimaEv', '')
-    },
-    stopAnima () {
-      pubsub.publish('stopAnimaEv', '')
-    }
-  }
+  components: { ProcessItem }
 }
 </script>
 
