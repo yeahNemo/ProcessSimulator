@@ -3,6 +3,7 @@ const { defineConfig } = require('@vue/cli-service')
 module.exports = defineConfig({
   transpileDependencies: true,
   lintOnSave: false,
+  publicPath: './',
   css: {
     loaderOptions: {
       // Vant组件库更改主题

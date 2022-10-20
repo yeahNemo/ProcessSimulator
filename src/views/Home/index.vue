@@ -19,7 +19,7 @@
 </template>
 
 <script>
-import ThreadItem from './threadItem.vue'
+import ThreadItem from '@/views/Home/threadItem.vue'
 export default {
   name: 'threadList',
   data () {

@@ -8,9 +8,11 @@
 
         <!-- 底部导航 -->
         <van-tabbar active-color="#52A38C" v-model="active">
-            <van-tabbar-item name="home" icon="home-o" to="/layout/home">主页
+            <van-tabbar-item name="demo01" icon="friends-o" to="/layout/home">实验1
             </van-tabbar-item>
-            <van-tabbar-item name="friends" icon="setting-o" to="/layout/setting">设置
+            <van-tabbar-item name="demo02" icon="friends-o" to="/layout/demo3">实验2
+            </van-tabbar-item>
+            <van-tabbar-item name="demo03" icon="friends-o" to="/layout/demo2">实验3
             </van-tabbar-item>
         </van-tabbar>
 

@@ -1,4 +1,4 @@
-import { Button, Col, Field, Icon, NavBar, NoticeBar, Row, Stepper, Swipe, SwipeItem, Switch, Tabbar, TabbarItem, Toast } from 'vant'
+import { Button, Checkbox, Circle, Col, Dialog, Field, Icon, NavBar, NoticeBar, Picker, Row, Stepper, Swipe, SwipeItem, Switch, Tabbar, TabbarItem, Toast } from 'vant'
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -19,6 +19,10 @@ Vue.use(Field)
 Vue.use(NoticeBar)
 Vue.use(Swipe)
 Vue.use(SwipeItem)
+Vue.use(Picker)
+Vue.use(Circle)
+Vue.use(Checkbox)
+Vue.use(Dialog)
 
 new Vue({
   router,

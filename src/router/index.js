@@ -17,15 +17,24 @@ const routes = [
         path: 'home',
         component: () => import('@/views/Home')
       },
+      // {
+      //   path: 'setting',
+      //   component: () => import('@/views/Setting')
+      // }
       {
-        path: 'setting',
-        component: () => import('@/views/Setting')
+        path: 'demo2',
+        component: () => import('@/views/Demo02')
+      },
+      {
+        path: 'demo3',
+        component: () => import('@/views/Demo03')
       }
     ]
-  },
+  }
 ]
 
 const router = new VueRouter({
+  mode: 'hash',
   routes
 })
 
